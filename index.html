@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>REALED · Energie- en adviesbureau voor bouw en vastgoed</title>
+<meta name="description" content="REALED is een onafhankelijk energie- en adviesbureau. EPB-verslaggeving, ventilatie, veiligheidscoördinatie, EPC, asbestattest, blowerdoor en meer. 26 specialisten in Brugge en Beveren-Leie." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="nl_BE" />
+<meta property="og:site_name" content="Realed" />
+<meta property="og:url" content="https://www.realed.be/" />
+<meta property="og:title" content="REALED · Energie- en adviesbureau voor bouw en vastgoed" />
+<meta property="og:description" content="Bouwadvies dat verder gaat dan de regels en normen. 26 specialisten, twee kantoren in West-Vlaanderen." />
+<meta property="og:image" content="https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?auto=format&fit=crop&w=1600&q=80" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="REALED · Energie- en adviesbureau voor bouw en vastgoed" />
+<meta name="twitter:description" content="Bouwadvies dat verder gaat dan de regels en normen. 26 specialisten, twee kantoren in West-Vlaanderen." />
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?auto=format&fit=crop&w=1600&q=80" />
+<link rel="canonical" href="https://www.realed.be/" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.realed.be/#organization",
+      "name": "Realed",
+      "alternateName": "REALED",
+      "url": "https://www.realed.be/",
+      "logo": "https://www.realed.be/realed-logo.png",
+      "description": "Onafhankelijk energie- en adviesbureau. EPB-verslaggeving, ventilatie, veiligheidscoördinatie, EPC, asbestattest, blowerdoor en keuring privé-riolering.",
+      "numberOfEmployees": {"@type": "QuantitativeValue", "value": 26},
+      "parentOrganization": {"@type": "Organization", "name": "studibo", "url": "https://www.studibo.be"},
+      "email": "info@realed.be",
+      "vatID": "BE0740675766",
+      "address": [
+        {"@type": "PostalAddress", "streetAddress": "Pathoekeweg 41", "postalCode": "8000", "addressLocality": "Brugge", "addressRegion": "West-Vlaanderen", "addressCountry": "BE"},
+        {"@type": "PostalAddress", "postalCode": "8791", "addressLocality": "Beveren-Leie", "addressRegion": "West-Vlaanderen", "addressCountry": "BE"}
+      ],
+      "areaServed": [
+        {"@type": "AdministrativeArea", "name": "West-Vlaanderen"},
+        {"@type": "AdministrativeArea", "name": "Oost-Vlaanderen"}
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.realed.be/#website",
+      "url": "https://www.realed.be/",
+      "name": "Realed",
+      "inLanguage": "nl-BE",
+      "publisher": {"@id": "https://www.realed.be/#organization"}
+    }
+  ]
+}
+</script>
+<link rel="icon" type="image/png" href="realed-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER + NAV. Identiek op elke pagina (zie partials.html)
+     Wissel enkel de .active class van nav-link per pagina.
+     ============================================================ -->
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand" aria-label="REALED home">
+      <img src="realed-logo.png" alt="REALED" />
+    </a>
+    <nav class="nav" aria-label="Hoofdmenu">
+      <a href="index.html" class="active">Home</a>
+      <a href="diensten.html">Diensten</a>
+      <a href="over-ons.html">Over ons</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="nieuws.html">Nieuws</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="contact.html" class="btn btn-primary">Offerte <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="https://studibo.be" class="btn btn-studibo" target="_blank" rel="noopener">By studibo</a>
+      <button class="menu-toggle" aria-label="Menu openen" aria-expanded="false">
+        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile overlay menu -->
+<div class="mobile-menu" aria-label="Mobiel menu">
+  <a href="index.html" class="active">Home</a>
+  <a href="diensten.html">Diensten</a>
+  <a href="over-ons.html">Over ons</a>
+  <a href="jobs.html">Jobs</a>
+  <a href="nieuws.html">Nieuws</a>
+  <a href="contact.html">Contact</a>
+  <div class="mobile-cta">
+    <a href="contact.html" class="btn btn-primary">Offerte aanvragen</a>
+    <a href="https://studibo.be" class="btn btn-studibo" target="_blank" rel="noopener">By studibo</a>
+  </div>
+</div>
+
+<!-- ============================================================
+     HOME HERO
+     ============================================================ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-copy">
+      <div class="hero-eyebrow">Energie- en adviesbureau · West-Vlaanderen</div>
+      <h1>Bouwadvies dat <em>verder gaat</em> dan de regels en normen.</h1>
+      <p class="hero-lead">
+        Van EPB-verslaggeving en ventilatie tot veiligheidscoördinatie, EPC en asbestattest: REALED ondersteunt architecten, bouwheren en projectontwikkelaars doorheen het volledige bouw- en renovatieproces. Eén aanspreekpunt, één duidelijk dossier.
+      </p>
+      <div class="hero-ctas">
+        <a href="diensten.html" class="btn btn-primary">
+          Ontdek onze diensten
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="contact.html" class="btn btn-ghost">Offerte aanvragen</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="num">26</div>
+          <div class="lbl">Specialisten in team</div>
+        </div>
+        <div class="stat">
+          <div class="num">2</div>
+          <div class="lbl">Kantoren in West-Vlaanderen</div>
+        </div>
+        <div class="stat">
+          <div class="num">8</div>
+          <div class="lbl">Diensten onder één dak</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=80" alt="Moderne gebouwen in West-Vlaanderen" />
+      <div class="hero-badge">
+        <div class="badge-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <div class="badge-text">
+          <div class="t1">Erkend door VEKA, OVAM &amp; Fedasbest</div>
+          <div class="t2">Alle verslagen voldoen aan de Vlaamse en federale regelgeving</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     OVER ONS / INTRO
+     ============================================================ -->
+<section class="intro" id="intro">
+  <div class="container">
+    <div class="intro-left">
+      <div class="accent-line"></div>
+      <div class="eyebrow">Over REALED</div>
+      <h2>Samen met het bouwteam ontzorgen we de opdrachtgever.</h2>
+    </div>
+    <div class="intro-right">
+      <p class="lead-p">
+        REALED is een onafhankelijk energie- en adviesbureau, onderdeel van studibo, met kantoren in Brugge en Beveren-Leie. We werken voor architecten, projectontwikkelaars, bouwheren en syndici. In residentiële, niet-residentiële, overheid-, commerciële en industriële bouwprojecten.
+      </p>
+      <p>
+        <strong>EPB-verslaggeving is onze hoofdactiviteit.</strong> Daarnaast verzorgen we ventilatieverslaggeving, veiligheidscoördinatie, EPC, asbestattesten, sloopopvolgingsplannen, blowerdoortesten en de keuring van privé-riolering. Acht expertises die elkaar versterken. Want een goed EPB-dossier vraagt ook vaak een degelijke ventilatierapportage en een blowerdoortest.
+      </p>
+      <p>
+        Ons team telt 26 specialisten: energiedeskundigen, ventilatieverslaggevers, veiligheidscoördinatoren en asbestinspecteurs. Elke opdracht start met een gesprek, een helder plan en één aanspreekpunt dat het dossier van A tot Z opvolgt.
+      </p>
+      <div class="intro-sign">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+        <span><strong>Erkenningen:</strong> VEKA · OVAM · Fedasbest · Tracimat · BCCA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EXPERTISE GRID
+     ============================================================ -->
+<section class="expertise" id="expertise">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Onze expertise</div>
+      <h2>Acht diensten, één aanspreekpunt.</h2>
+      <p>EPB-verslaggeving is onze hoofdactiviteit. Daarrond bieden we alle expertises die je bouwproject nodig heeft. Van eerste ontwerp tot voorlopige oplevering.</p>
+    </div>
+    <div class="services">
+
+      <a href="dienst-epb.html" class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6"/><path d="M12 22v-6"/><circle cx="12" cy="12" r="4"/><path d="M4.93 4.93l4.24 4.24"/><path d="M14.83 14.83l4.24 4.24"/><path d="M4.93 19.07l4.24-4.24"/><path d="M14.83 9.17l4.24-4.24"/></svg>
+        </div>
+        <h3>EPB-verslaggeving</h3>
+        <p>Onze kernactiviteit. Begeleiding en berekening van de energieprestatie bij nieuwbouw en ingrijpende renovatie. Residentieel én niet-residentieel.</p>
+        <span class="arrow">Meer info
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a href="dienst-ventilatie.html" class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l3-9 4 18 3-9h6"/></svg>
+        </div>
+        <h3>Ventilatieverslaggeving</h3>
+        <p>Voorontwerp, prestatieverslag en debietmetingen. Een sluitend ventilatiedossier dat hand in hand gaat met je EPB.</p>
+        <span class="arrow">Meer info
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a href="dienst-veiligheidscoordinatie.html" class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Veiligheidscoördinatie</h3>
+        <p>Niveau A en B: van ontwerp tot werfopvolging. Eén coördinator voor de volledige duur van je project. Voor residentiële én industriële werven.</p>
+        <span class="arrow">Meer info
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a href="dienst-epc.html" class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+        </div>
+        <h3>EPC</h3>
+        <p>Energieprestatiecertificaat voor woningen, appartementen, kleine niet-residentiële en gemeenschappelijke delen. Deadline VME: <strong>31/12/2026</strong>.</p>
+        <span class="arrow">Meer info
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a href="dienst-asbestattest.html" class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21V13h6v8"/></svg>
+        </div>
+        <h3>Asbestattest</h3>
+        <p>OVAM-attest voor gebouwen van voor 2001 bij verkoop of overdracht. Ook asbestinventaris gemeenschappelijke delen (deadline VME 31/12/2026).</p>
+        <span class="arrow">Meer info
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a href="dienst-sop.html" class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22l5-5"/><path d="M7 22l10-10"/><path d="M12 22l10-10"/><path d="M17 22l5-5"/><path d="M22 12v10"/></svg>
+        </div>
+        <h3>Sloopopvolgingsplan</h3>
+        <p>SOP en destructieve asbestinventaris bij afbraak of grondige renovatie. Conform Tracimat.</p>
+        <span class="arrow">Meer info
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a href="dienst-blowerdoor.html" class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3>Blowerdoortest</h3>
+        <p>Luchtdichtheidsmeting die rechtstreeks in je EPB-dossier gevaloriseerd wordt. Erkend door BCCA.</p>
+        <span class="arrow">Meer info
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a href="dienst-riolering.html" class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c0-4.97 4.03-9 9-9s9 4.03 9 9"/><path d="M12 12v9"/><path d="M7 21h10"/></svg>
+        </div>
+        <h3>Keuring privé-riolering</h3>
+        <p>Verplichte keuring voor de aansluiting op de openbare riolering bij nieuwbouw, herbouw of grote renovatie.</p>
+        <span class="arrow">Meer info
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     JOBS CALLOUT
+     ============================================================ -->
+<section class="jobs" id="jobs">
+  <div class="container">
+    <div class="jobs-left">
+      <div class="eyebrow">Werken bij REALED</div>
+      <h2>Word deel van een team van 26 specialisten.</h2>
+      <p>We groeien. Ben je energiedeskundige, ventilatieverslaggever, veiligheidscoördinator of asbestinspecteur met goesting in bouw, regelgeving en concreet werk? Stuur je CV of spring binnen voor een koffie.</p>
+      <div class="jobs-ctas">
+        <a href="jobs.html" class="btn btn-on-dark">
+          Bekijk alle vacatures
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="mailto:jobs@realed.be" class="btn btn-outline-light">Spontaan solliciteren</a>
+      </div>
+    </div>
+    <div class="jobs-right">
+      <a href="jobs.html" class="job-post">
+        <div>
+          <div class="jp-title">EPB-verslaggever</div>
+          <div class="jp-meta">Voltijds · Brugge of Beveren-Leie</div>
+        </div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="jobs.html" class="job-post">
+        <div>
+          <div class="jp-title">Ventilatieverslaggever</div>
+          <div class="jp-meta">Voltijds · West-Vlaanderen</div>
+        </div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="jobs.html" class="job-post">
+        <div>
+          <div class="jp-title">Veiligheidscoördinator niveau A</div>
+          <div class="jp-meta">Voltijds · Beveren-Leie</div>
+        </div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     NIEUWS
+     ============================================================ -->
+<section class="news" id="news">
+  <div class="container">
+    <div class="news-header-flex">
+      <div class="section-header" style="margin-bottom:0;">
+        <div class="eyebrow">Actueel</div>
+        <h2>Nieuws &amp; regelgeving</h2>
+      </div>
+      <a href="nieuws.html" class="btn btn-ghost">
+        Alle berichten
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="news-grid">
+
+      <a href="nieuws.html" class="news-card">
+        <div class="nc-img"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="" /></div>
+        <div class="nc-body">
+          <div class="nc-meta"><span>17 APR 2026</span><span class="nc-tag">Regelgeving</span></div>
+          <h3>VME-deadline 31/12/2026: wat betekent dat concreet voor syndici?</h3>
+          <p>Een overzicht van de verplichtingen rond EPC gemeenschappelijke delen en asbestattest GD voor appartementsgebouwen.</p>
+        </div>
+      </a>
+
+      <a href="nieuws.html" class="news-card">
+        <div class="nc-img"><img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=800&q=80" alt="" /></div>
+        <div class="nc-body">
+          <div class="nc-meta"><span>02 APR 2026</span><span class="nc-tag">Codex</span></div>
+          <h3>KB 19/12/2025 en 30/12/2025: update asbestinventaris voor werkgevers</h3>
+          <p>De Codex Welzijn op het Werk is vernieuwd. Wat wijzigt er voor werkgevers-opdrachtgevers in 2026?</p>
+        </div>
+      </a>
+
+      <a href="nieuws.html" class="news-card">
+        <div class="nc-img"><img src="https://images.unsplash.com/photo-1590247813693-5541d1c609fd?auto=format&fit=crop&w=800&q=80" alt="" /></div>
+        <div class="nc-body">
+          <div class="nc-meta"><span>21 MAA 2026</span><span class="nc-tag">EPB</span></div>
+          <h3>Ventilatiedebietmetingen: waarom laten meten in de ontwerpfase tijd en geld bespaart</h3>
+          <p>Wachten tot oplevering om debieten te laten meten is een dure gok. Zo verweven we ventilatie- en EPB-dossier van bij de start.</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT STRIP
+     ============================================================ -->
+<section class="contact-strip" id="contact">
+  <div class="container">
+    <div class="cs-left">
+      <h3>Klaar om een dossier op te starten?</h3>
+      <p>Bel ons op +32 50 32 11 20 of vraag een vrijblijvende offerte aan via het formulier.</p>
+    </div>
+    <div class="cs-right">
+      <a href="mailto:info@realed.be" class="btn btn-on-dark">Mail naar info@realed.be</a>
+      <a href="contact.html" class="btn btn-outline-light">Offerte aanvragen</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER. Identiek op elke pagina (zie partials.html)
+     ============================================================ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="realed-logo.png" alt="REALED" />
+        <p>Onafhankelijk energie- en adviesbureau voor bouw en vastgoed. Onderdeel van studibo. 26 specialisten, twee kantoren in West-Vlaanderen.</p>
+        <div class="socials">
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56V14.9c0-1.32-.02-3.02-1.84-3.02-1.84 0-2.12 1.44-2.12 2.92v5.65H9.37V9h3.42v1.56h.05c.48-.9 1.64-1.84 3.38-1.84 3.61 0 4.28 2.38 4.28 5.47v6.26zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.51 1.5-3.9 3.78-3.9 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Diensten</h4>
+        <ul>
+          <li><a href="dienst-epb.html">EPB-verslaggeving</a></li>
+          <li><a href="dienst-ventilatie.html">Ventilatieverslaggeving</a></li>
+          <li><a href="dienst-veiligheidscoordinatie.html">Veiligheidscoördinatie</a></li>
+          <li><a href="dienst-epc.html">EPC</a></li>
+          <li><a href="dienst-asbestattest.html">Asbestattest</a></li>
+          <li><a href="dienst-sop.html">Sloopopvolgingsplan</a></li>
+          <li><a href="dienst-blowerdoor.html">Blowerdoortest</a></li>
+          <li><a href="dienst-riolering.html">Keuring privé-riolering</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Bedrijf</h4>
+        <ul>
+          <li><a href="over-ons.html">Over ons</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="nieuws.html">Nieuws</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="algemene-voorwaarden.html">Algemene voorwaarden</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Kantoren</h4>
+        <address class="footer-address">
+          <strong>Brugge</strong>
+          Pathoekeweg 9A bus 0003<br>
+          8000 Brugge<br>
+          +32 50 32 11 20
+        </address>
+        <address class="footer-address">
+          <strong>Beveren-Leie</strong>
+          Liebaardstraat 194<br>
+          8791 Beveren-Leie<br>
+          +32 56 20 19 86
+        </address>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 REALED by studibo · BE 0740.675.766 · info@realed.be</div>
+      <div>
+        <a href="privacy.html">Privacybeleid</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="algemene-voorwaarden.html">Algemene voorwaarden</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

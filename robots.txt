@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Geen directory indexing, geen partials
+Disallow: /partials.html
+
+# Sitemap
+Sitemap: https://www.realed.be/sitemap.xml
