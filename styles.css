@@ -218,10 +218,9 @@ p  { color: var(--slate-700); }
 .menu-toggle:hover { border-color: var(--green-600); }
 .menu-toggle svg { width: 20px; height: 20px; stroke: var(--ink); transition: stroke .18s var(--ease); }
 .menu-toggle .icon-close { display: none; }
-.menu-toggle[aria-expanded="true"] { background: var(--ink); border-color: var(--ink); }
-.menu-toggle[aria-expanded="true"] svg { stroke: var(--white); }
-.menu-toggle[aria-expanded="true"] .icon-open { display: none; }
-.menu-toggle[aria-expanded="true"] .icon-close { display: block; }
+.menu-toggle[aria-expanded="true"] { background: var(--white); border-color: var(--line); }
+.menu-toggle[aria-expanded="true"] svg { stroke: var(--ink); }
+.menu-toggle .icon-close { display: none; }
 
 .mobile-menu {
   position: fixed;
@@ -313,20 +312,8 @@ p  { color: var(--slate-700); }
 .mobile-menu .mobile-cta .btn-studibo { background: #2155D8; }
 .mobile-menu .mobile-cta .btn-studibo:hover { background: #1840B0; }
 
-/* Hint-line boven de CTA's */
-.mobile-menu .mobile-cta-hint {
-  margin-top: 28px;
-  margin-bottom: 10px;
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: var(--slate-500);
-  opacity: 0;
-  transform: translateY(6px);
-  transition: opacity .3s var(--ease) .24s, transform .3s var(--ease) .24s;
-}
-.mobile-menu.open .mobile-cta-hint { opacity: 1; transform: translateY(0); }
+/* Hint-line boven de CTA's — verborgen op vraag van klant */
+.mobile-menu .mobile-cta-hint { display: none; }
 
 /* Body-lock when menu open */
 body.menu-open { overflow: hidden; }
