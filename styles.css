@@ -2962,3 +2962,25 @@ footer {
   .apply-form { padding: 24px 20px; }
   .apply-form-wrap { padding: 56px 0; }
 }
+
+/* === Google reCAPTCHA + gated submit === */
+.recaptcha-field {
+  margin: 4px 0 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+.recaptcha-field .g-recaptcha {
+  transform-origin: left top;
+}
+@media (max-width: 360px) {
+  .recaptcha-field .g-recaptcha { transform: scale(0.86); }
+}
+.submit-gated[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  filter: grayscale(20%);
+}
+.submit-gated[disabled]:hover {
+  transform: none;
+  box-shadow: none;
+}

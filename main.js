@@ -172,3 +172,16 @@
     });
   }
 })();
+
+// Google reCAPTCHA v2 — enable submit pas na succesvolle captcha
+// Callbacks zijn globaal (data-callback / data-expired-callback op de widget)
+function onRecaptchaSuccess() {
+  document.querySelectorAll('.submit-gated').forEach(function (btn) {
+    btn.removeAttribute('disabled');
+  });
+}
+function onRecaptchaExpired() {
+  document.querySelectorAll('.submit-gated').forEach(function (btn) {
+    btn.setAttribute('disabled', 'disabled');
+  });
+}

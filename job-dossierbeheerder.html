@@ -66,6 +66,7 @@
 }
   </script>
 
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 
@@ -408,7 +409,12 @@
           <span>Ik ga akkoord dat Realed mijn gegevens gebruikt voor deze sollicitatieprocedure, conform het <a href="privacy.html">privacybeleid</a>.</span>
         </label>
 
-        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 14px 22px;">
+        <!-- Google reCAPTCHA v2 -->
+        <div class="form-field recaptcha-field">
+          <div class="g-recaptcha" data-sitekey="6LdWuL8sAAAAAONJeXwn0mnoMP0BM4yyL0JJoBKU" data-callback="onRecaptchaSuccess" data-expired-callback="onRecaptchaExpired"></div>
+        </div>
+
+        <button type="submit" class="btn btn-primary submit-gated" disabled style="width: 100%; justify-content: center; padding: 14px 22px;">
           Verstuur sollicitatie
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
         </button>
