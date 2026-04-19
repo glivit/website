@@ -337,15 +337,18 @@
         </div>
       </aside>
 
-      <form class="apply-form" action="#" method="post" enctype="multipart/form-data" novalidate>
+      <form class="apply-form" action="https://formsubmit.co/glenn@realed.be" method="post" enctype="multipart/form-data" novalidate>
         <h3>Je sollicitatie</h3>
         <p class="af-sub">Velden met * zijn verplicht. De rest mag je overslaan.</p>
 
-        <!-- Honeypot: verborgen voor mensen, ingevuld door bots -->
-        <div class="hp-field" aria-hidden="true">
-          <label for="hp-website">Laat dit veld leeg</label>
-          <input type="text" id="hp-website" name="website" tabindex="-1" autocomplete="off" />
-        </div>
+        <!-- FormSubmit config -->
+        <input type="hidden" name="_subject" value="Sollicitatie Energiedeskundige type A & D · Realed.be" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_next" value="https://www.realed.be/bedankt.html?type=job" />
+
+        <!-- Honeypot tegen spambots -->
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
         <input type="hidden" name="vacature" value="Energiedeskundige type A & D" />
 
