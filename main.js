@@ -7,17 +7,26 @@
   const menu = document.querySelector('.mobile-menu');
   if (toggle && menu) {
     toggle.addEventListener('click', function () {
+      const willOpen = !menu.classList.contains('open');
       menu.classList.toggle('open');
-      const isOpen = menu.classList.contains('open');
-      document.body.style.overflow = isOpen ? 'hidden' : '';
-      toggle.setAttribute('aria-expanded', isOpen);
+      document.body.classList.toggle('menu-open', willOpen);
+      toggle.setAttribute('aria-expanded', willOpen);
     });
     // Close on link click
     menu.querySelectorAll('a').forEach(function (a) {
       a.addEventListener('click', function () {
         menu.classList.remove('open');
-        document.body.style.overflow = '';
+        document.body.classList.remove('menu-open');
+        toggle.setAttribute('aria-expanded', 'false');
       });
+    });
+    // Close on Escape
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && menu.classList.contains('open')) {
+        menu.classList.remove('open');
+        document.body.classList.remove('menu-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
     });
   }
 
