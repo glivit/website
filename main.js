@@ -124,6 +124,25 @@
     }
   })();
 
+  // File-upload: toon bestandsnaam na selectie (job-*.html)
+  document.querySelectorAll('.file-upload input[type="file"]').forEach(function (input) {
+    input.addEventListener('change', function () {
+      const wrap = input.closest('.file-upload');
+      const targetSel = input.getAttribute('data-filename-target');
+      const target = targetSel ? wrap.querySelector(targetSel) : null;
+      if (input.files && input.files.length) {
+        const f = input.files[0];
+        const sizeKB = Math.round(f.size / 1024);
+        const sizeText = sizeKB > 1024 ? (sizeKB / 1024).toFixed(1) + ' MB' : sizeKB + ' KB';
+        if (target) target.textContent = f.name + ' · ' + sizeText;
+        wrap.setAttribute('data-has-file', 'true');
+      } else {
+        if (target) target.textContent = '';
+        wrap.removeAttribute('data-has-file');
+      }
+    });
+  });
+
   // News category filter (nieuws.html)
   const filterButtons = document.querySelectorAll('.news-filter button');
   if (filterButtons.length) {
