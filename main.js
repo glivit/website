@@ -185,3 +185,54 @@ function onRecaptchaExpired() {
     btn.setAttribute('disabled', 'disabled');
   });
 }
+
+// Google Places Autocomplete — adres-autofill voor het contactformulier
+// Callback wordt opgeroepen door de Maps JS API script tag (?callback=initRealedAutocomplete)
+// Bindt op elk input-veld met attribuut data-places-autocomplete, beperkt tot BE.
+// Parst het geselecteerde adres en vult de verborgen velden (#adres_straat, #adres_nummer,
+// #adres_postcode, #adres_gemeente, #adres_land) zodat FormSubmit het gestructureerd doorstuurt.
+function initRealedAutocomplete() {
+  if (!(window.google && google.maps && google.maps.places)) return;
+
+  var inputs = document.querySelectorAll('input[data-places-autocomplete]');
+  inputs.forEach(function (input) {
+    var ac = new google.maps.places.Autocomplete(input, {
+      componentRestrictions: { country: ['be'] },
+      fields: ['address_components', 'formatted_address', 'geometry'],
+      types: ['address']
+    });
+
+    ac.addListener('place_changed', function () {
+      var place = ac.getPlace();
+      if (!place || !place.address_components) return;
+
+      var parts = { route: '', street_number: '', postal_code: '', locality: '', country: '' };
+      place.address_components.forEach(function (c) {
+        c.types.forEach(function (t) {
+          if (t in parts) parts[t] = c.long_name;
+        });
+      });
+
+      var doc = document;
+      function setVal(id, v) { var el = doc.getElementById(id); if (el) el.value = v || ''; }
+      setVal('adres_straat',    parts.route);
+      setVal('adres_nummer',    parts.street_number);
+      setVal('adres_postcode',  parts.postal_code);
+      setVal('adres_gemeente',  parts.locality);
+      setVal('adres_land',      parts.country);
+
+      // Toon het formatted_address in het zichtbare veld voor duidelijkheid
+      if (place.formatted_address) input.value = place.formatted_address;
+    });
+
+    // Voorkom dat Enter op de autocomplete-dropdown het formulier submit
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        var pac = document.querySelector('.pac-container:not([style*="display: none"])');
+        if (pac && pac.offsetHeight > 0) e.preventDefault();
+      }
+    });
+  });
+}
+// Expose op window voor Maps callback
+window.initRealedAutocomplete = initRealedAutocomplete;

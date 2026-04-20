@@ -930,7 +930,10 @@ section { padding: 100px 0; }
   justify-content: space-between;
   align-items: center;
   gap: 16px;
+  text-decoration: none;
+  color: inherit;
 }
+a.job-post:hover .jp-title { color: var(--green-300, #9ad39f); }
 .job-post:hover {
   background: rgba(61,122,66,0.15);
   border-color: rgba(78,143,84,0.4);

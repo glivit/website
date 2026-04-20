@@ -40,7 +40,13 @@
 }
   </script>
 
+  <!-- reCAPTCHA v2 — TIJDELIJK UITGESCHAKELD (huidige site key is ongeldig type). Zet opnieuw aan zodra nieuwe v2-key beschikbaar is.
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  -->
+
+  <!-- Google Maps JavaScript API + Places library voor adres-autofill.
+       BEVEILIGING: restrict deze key in Google Cloud Console → Credentials → HTTP referrers = *.realed.be/* én API restrictions = Maps JS API + Places API (New). -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4Gj5p1UbQiQiqqjz0HuqcBm6K4l-glt4&libraries=places&language=nl&region=BE&loading=async&callback=initRealedAutocomplete" async defer></script>
 </head>
 <body>
 
@@ -256,8 +262,20 @@
           </div>
 
           <div class="form-field">
+            <label for="adres">Adres van het project (optioneel)</label>
+            <input type="text" id="adres" name="adres" autocomplete="off" placeholder="Begin te typen, we suggereren het adres..." data-places-autocomplete />
+            <span class="field-hint" style="font-size:0.82rem; color:var(--slate-500); margin-top:6px; display:block;">Zo kunnen we snel nagaan of we in uw regio werken.</span>
+            <!-- Verborgen velden worden automatisch ingevuld door Places API -->
+            <input type="hidden" name="adres_straat" id="adres_straat" />
+            <input type="hidden" name="adres_nummer" id="adres_nummer" />
+            <input type="hidden" name="adres_postcode" id="adres_postcode" />
+            <input type="hidden" name="adres_gemeente" id="adres_gemeente" />
+            <input type="hidden" name="adres_land" id="adres_land" />
+          </div>
+
+          <div class="form-field">
             <label for="bericht">Hoe kunnen we u helpen? *</label>
-            <textarea id="bericht" name="bericht" rows="6" placeholder="Geef kort uw project mee: nieuwbouw of renovatie, locatie, geplande startdatum, enzovoort." required></textarea>
+            <textarea id="bericht" name="bericht" rows="6" placeholder="Geef kort uw project mee: nieuwbouw of renovatie, geplande startdatum, enzovoort." required></textarea>
           </div>
 
           <div class="form-field">
@@ -270,12 +288,13 @@
             <span>Ik ga akkoord dat Realed mijn gegevens gebruikt om mijn aanvraag te behandelen, conform het <a href="privacy.html">privacybeleid</a>.</span>
           </label>
 
-          <!-- Google reCAPTCHA v2 -->
+          <!-- Google reCAPTCHA v2 — TIJDELIJK UITGESCHAKELD tot nieuwe v2 site key beschikbaar is.
           <div class="form-field recaptcha-field">
-            <div class="g-recaptcha" data-sitekey="6LdWuL8sAAAAAONJeXwn0mnoMP0BM4yyL0JJoBKU" data-callback="onRecaptchaSuccess" data-expired-callback="onRecaptchaExpired"></div>
+            <div class="g-recaptcha" data-sitekey="NIEUWE_SITE_KEY_HIER" data-callback="onRecaptchaSuccess" data-expired-callback="onRecaptchaExpired"></div>
           </div>
+          -->
 
-          <button type="submit" class="btn btn-primary submit-gated" disabled style="width: 100%; justify-content: center; padding: 14px 22px;">
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 14px 22px;">
             Verzend bericht
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
           </button>
