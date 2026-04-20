@@ -186,6 +186,73 @@ function onRecaptchaExpired() {
   });
 }
 
+// Realed — AJAX form submission naar FormSubmit
+// Voorkomt dat de gebruiker ooit de kale formsubmit.co URL ziet.
+// Bij success: redirect naar _next. Bij fout (netwerk/adblock/down): in-page error met telefoonnummers.
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    var forms = document.querySelectorAll('form[action^="https://formsubmit.co/"]');
+    if (!forms.length) return;
+
+    forms.forEach(function (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        var submitBtn = form.querySelector('button[type="submit"], input[type="submit"]');
+        var originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+        if (submitBtn) {
+          submitBtn.setAttribute('disabled', 'disabled');
+          submitBtn.innerHTML = 'Bezig met verzenden...';
+        }
+
+        // Verwijder eerdere error
+        var existingErr = form.querySelector('.form-error');
+        if (existingErr) existingErr.remove();
+
+        var nextInput = form.querySelector('input[name="_next"]');
+        var nextUrl = nextInput && nextInput.value ? nextInput.value : 'bedankt.html';
+
+        // Bouw AJAX endpoint: formsubmit.co/email -> formsubmit.co/ajax/email
+        var ajaxAction = form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+        var formData = new FormData(form);
+
+        fetch(ajaxAction, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        })
+          .then(function (res) {
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            return res.json().catch(function () { return {}; });
+          })
+          .then(function () {
+            window.location.href = nextUrl;
+          })
+          .catch(function () {
+            if (submitBtn) {
+              submitBtn.removeAttribute('disabled');
+              submitBtn.innerHTML = originalBtnHtml;
+            }
+            var errorBox = document.createElement('div');
+            errorBox.className = 'form-error';
+            errorBox.setAttribute('role', 'alert');
+            errorBox.style.cssText = 'margin: 18px 0; padding: 14px 16px; background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; color: #991b1b; font-size: 0.92rem; line-height: 1.6;';
+            errorBox.innerHTML = '<strong>Verzending niet gelukt.</strong> Probeer het opnieuw, of neem rechtstreeks contact op via <a href="tel:+3250321120" style="color:#991b1b; font-weight:600;">+32 50 32 11 20</a> · <a href="tel:+3256201986" style="color:#991b1b; font-weight:600;">+32 56 20 19 86</a> · <a href="mailto:info@realed.be" style="color:#991b1b; font-weight:600;">info@realed.be</a>.';
+            if (submitBtn && submitBtn.parentNode) {
+              submitBtn.parentNode.insertBefore(errorBox, submitBtn);
+            } else {
+              form.appendChild(errorBox);
+            }
+            // Reset reCAPTCHA zodat gebruiker opnieuw kan proberen
+            if (window.grecaptcha && typeof window.grecaptcha.reset === 'function') {
+              try { window.grecaptcha.reset(); } catch (e) {}
+            }
+          });
+      });
+    });
+  });
+})();
+
 // Google Places Autocomplete — adres-autofill voor het contactformulier
 // Callback wordt opgeroepen door de Maps JS API script tag (?callback=initRealedAutocomplete)
 // Bindt op elk input-veld met attribuut data-places-autocomplete, beperkt tot BE.
