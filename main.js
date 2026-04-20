@@ -1,4 +1,4 @@
-// REALED — gedeelde JavaScript voor alle pagina's
+// REALED, gedeelde JavaScript voor alle pagina's
 // Mobile menu toggle + header shadow on scroll
 
 (function () {
@@ -46,7 +46,7 @@
     });
   }
 
-  // Cookiebanner — minimal GDPR consent (noodzakelijk + statistiek + marketing)
+  // Cookiebanner, minimal GDPR consent (noodzakelijk + statistiek + marketing)
   // Persisted in localStorage as "realed_consent" JSON: {necessary:true, stats:bool, marketing:bool, v:1, ts:ISO}
   (function () {
     const LS_KEY = 'realed_consent';
@@ -173,7 +173,7 @@
   }
 })();
 
-// Google reCAPTCHA v2 — enable submit pas na succesvolle captcha
+// Google reCAPTCHA v2, enable submit pas na succesvolle captcha
 // Callbacks zijn globaal (data-callback / data-expired-callback op de widget)
 function onRecaptchaSuccess() {
   document.querySelectorAll('.submit-gated').forEach(function (btn) {
@@ -186,7 +186,7 @@ function onRecaptchaExpired() {
   });
 }
 
-// Realed — AJAX form submission naar FormSubmit
+// Realed, AJAX form submission naar FormSubmit
 // Voorkomt dat de gebruiker ooit de kale formsubmit.co URL ziet.
 // Bij success: redirect naar _next. Bij fout (netwerk/adblock/down): in-page error met telefoonnummers.
 (function () {
@@ -253,7 +253,7 @@ function onRecaptchaExpired() {
   });
 })();
 
-// Google Places Autocomplete — adres-autofill voor het contactformulier
+// Google Places Autocomplete, adres-autofill voor het contactformulier
 // Callback wordt opgeroepen door de Maps JS API script tag (?callback=initRealedAutocomplete)
 // Bindt op elk input-veld met attribuut data-places-autocomplete, beperkt tot BE.
 // Parst het geselecteerde adres en vult de verborgen velden (#adres_straat, #adres_nummer,

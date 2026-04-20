@@ -200,7 +200,7 @@ p  { color: var(--slate-700); }
 .btn svg { width: 16px; height: 16px; transition: transform .2s var(--ease); }
 .btn:hover svg { transform: translateX(3px); }
 
-/* Mobile menu — clean fade/slide, compact nav, X-close */
+/* Mobile menu, clean fade/slide, compact nav, X-close */
 .menu-toggle {
   display: none;
   padding: 10px;
@@ -243,7 +243,7 @@ p  { color: var(--slate-700); }
   transition: opacity .22s var(--ease), transform .28s var(--ease), visibility 0s linear 0s;
 }
 
-/* Links — stagger fade-in when open */
+/* Links, stagger fade-in when open */
 .mobile-menu a:not(.btn) {
   display: flex;
   align-items: center;
@@ -284,7 +284,7 @@ p  { color: var(--slate-700); }
 .mobile-menu.open a:not(.btn):nth-child(5) { transition-delay: .20s; }
 .mobile-menu.open a:not(.btn):nth-child(6) { transition-delay: .24s; }
 
-/* CTA row — side by side, compact, forced white text */
+/* CTA row, side by side, compact, forced white text */
 .mobile-menu .mobile-cta {
   margin-top: 28px;
   display: grid;
@@ -312,7 +312,7 @@ p  { color: var(--slate-700); }
 .mobile-menu .mobile-cta .btn-studibo { background: #2155D8; }
 .mobile-menu .mobile-cta .btn-studibo:hover { background: #1840B0; }
 
-/* Hint-line boven de CTA's — verborgen op vraag van klant */
+/* Hint-line boven de CTA's, verborgen op vraag van klant */
 .mobile-menu .mobile-cta-hint { display: none; }
 
 /* Body-lock when menu open */
@@ -2731,7 +2731,7 @@ footer {
 }
 .check-list.single { grid-template-columns: 1fr; }
 
-/* Benefits grid — reuses .perks-grid aesthetic but with border-card style */
+/* Benefits grid, reuses .perks-grid aesthetic but with border-card style */
 .job-benefits {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2803,7 +2803,7 @@ footer {
   line-height: 1.5;
 }
 
-/* Sollicitatietraject — 3 stappen */
+/* Sollicitatietraject, 3 stappen */
 .apply-steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2961,7 +2961,7 @@ footer {
 }
 .file-upload[data-has-file="true"] .fu-filename { display: block; }
 
-/* Honeypot — visually hidden */
+/* Honeypot, visually hidden */
 .hp-field {
   position: absolute !important;
   left: -9999px !important;
