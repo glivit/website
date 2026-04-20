@@ -1771,6 +1771,29 @@ footer {
   margin-top: 22px;
 }
 .detail-aside .da-cta .btn { width: 100%; justify-content: center; }
+.detail-aside .da-phones {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  font-size: 0.92rem;
+}
+.detail-aside .da-phones a { color: var(--ink); text-decoration: none; }
+.detail-aside .da-phones a:hover { color: var(--green-700); }
+.detail-aside .da-phones strong { color: var(--green-700); font-weight: 600; margin-right: 6px; }
+
+/* Generic phone-number blocks used across CTAs */
+.hero-phones-inline { display: flex; flex-wrap: wrap; gap: 20px 28px; margin: 16px 0 8px; font-size: 0.95rem; }
+.hero-phones-inline a { color: var(--ink); text-decoration: none; }
+.hero-phones-inline a:hover { color: var(--green-700); }
+.hero-phones-inline strong { color: var(--green-700); font-weight: 600; margin-right: 6px; }
+
+.cs-phones { display: flex; flex-direction: column; gap: 4px; font-size: 0.95rem; }
+.cs-phones a { color: rgba(255,255,255,0.9); text-decoration: none; }
+.cs-phones a:hover { color: var(--white); }
+.cs-phones strong { color: var(--white); font-weight: 600; margin-right: 6px; }
 
 /* Regelgeving grid (cert cards) */
 .regulation { background: var(--cream-50, #fafaf7); padding: 72px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
