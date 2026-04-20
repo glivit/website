@@ -55,10 +55,7 @@
 }
   </script>
 
-  <!-- reCAPTCHA v2 — TIJDELIJK UITGESCHAKELD (oude key gaf "ongeldig sleuteltype").
-       Heractiveren: nieuwe v2-key aanmaken op https://www.google.com/recaptcha/admin
-       en onderstaande <script> + de .recaptcha-field div + 'submit-gated disabled' terugzetten. -->
-  <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 
@@ -125,7 +122,7 @@
 
         <div class="jh-ctas">
           <a href="#solliciteer" class="btn btn-primary">Solliciteer direct <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-          <a href="mailto:jobs@realed.be?subject=Vraag over vacature Veiligheidscoördinator B" class="btn btn-ghost">Stel eerst een vraag</a>
+          <a href="mailto:info@realed.be?subject=Vraag over vacature Veiligheidscoördinator B" class="btn btn-ghost">Stel eerst een vraag</a>
         </div>
       </div>
 
@@ -319,7 +316,7 @@
       <div class="apply-step">
         <h4>Rondleiding + voorstel</h4>
         <p>Je komt langs op kantoor Brugge, ontmoet de collega's en krijgt een concreet voorstel mee. Eén weekend om te beslissen.</p>
-        <div class="as-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Halve dag op kantoor</div>
+        <div class="as-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Op kantoor</div>
       </div>
     </div>
   </div>
@@ -333,7 +330,7 @@
         <div class="eyebrow">Solliciteer</div>
         <h3>Stuur je CV en we bellen je op.</h3>
         <p>Het formulier hiernaast neemt 2 minuten in beslag. We lezen elke sollicitatie persoonlijk en bezorgen je een eerlijk antwoord — ja of nee.</p>
-        <p>Geen CV bij de hand? Mail ons direct op <a href="mailto:jobs@realed.be" style="color:var(--green-700);text-decoration:underline;">jobs@realed.be</a> met een paar zinnen over jezelf. Dat mag ook.</p>
+        <p>Geen CV bij de hand? Mail ons direct op <a href="mailto:info@realed.be" style="color:var(--green-700);text-decoration:underline;">info@realed.be</a> met een paar zinnen over jezelf. Dat mag ook.</p>
 
         <div class="af-assurance">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -341,7 +338,7 @@
         </div>
       </aside>
 
-      <form class="apply-form" action="https://formsubmit.co/glenn@realed.be" method="post" enctype="multipart/form-data" novalidate>
+      <form class="apply-form" action="https://formsubmit.co/info@realed.be" method="post" enctype="multipart/form-data" novalidate>
         <h3>Je sollicitatie</h3>
         <p class="af-sub">Velden met * zijn verplicht. De rest mag je overslaan.</p>
 
@@ -412,13 +409,12 @@
           <span>Ik ga akkoord dat Realed mijn gegevens gebruikt voor deze sollicitatieprocedure, conform het <a href="privacy.html">privacybeleid</a>.</span>
         </label>
 
-        <!-- Google reCAPTCHA v2 — TIJDELIJK UITGESCHAKELD tot nieuwe site-key beschikbaar is
+        <!-- Google reCAPTCHA v2 -->
         <div class="form-field recaptcha-field">
-          <div class="g-recaptcha" data-sitekey="NIEUWE_V2_KEY_HIER" data-callback="onRecaptchaSuccess" data-expired-callback="onRecaptchaExpired"></div>
+          <div class="g-recaptcha" data-sitekey="6LcgucAsAAAAAOfHRA_-iXJNvv-S0fL3leBXe1oE" data-callback="onRecaptchaSuccess" data-expired-callback="onRecaptchaExpired"></div>
         </div>
-        -->
 
-        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 14px 22px;">
+        <button type="submit" class="btn btn-primary submit-gated" disabled style="width: 100%; justify-content: center; padding: 14px 22px;">
           Verstuur sollicitatie
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
         </button>

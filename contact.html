@@ -40,9 +40,7 @@
 }
   </script>
 
-  <!-- reCAPTCHA v2 — TIJDELIJK UITGESCHAKELD (huidige site key is ongeldig type). Zet opnieuw aan zodra nieuwe v2-key beschikbaar is.
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  -->
 
   <!-- Google Maps JavaScript API + Places library voor adres-autofill.
        BEVEILIGING: restrict deze key in Google Cloud Console → Credentials → HTTP referrers = *.realed.be/* én API restrictions = Maps JS API + Places API (New). -->
@@ -219,7 +217,7 @@
         <h3>Stuur een bericht</h3>
         <p class="cf-sub">Bezorg ons, indien mogelijk, het plan en de stedenbouwkundige vergunning. Dat versnelt onze offerte aanzienlijk.</p>
 
-        <form action="https://formsubmit.co/glenn@realed.be" method="post" enctype="multipart/form-data">
+        <form action="https://formsubmit.co/info@realed.be" method="post" enctype="multipart/form-data">
           <!-- FormSubmit config -->
           <input type="hidden" name="_subject" value="Nieuwe aanvraag via Realed.be contact" />
           <input type="hidden" name="_captcha" value="false" />
@@ -288,13 +286,12 @@
             <span>Ik ga akkoord dat Realed mijn gegevens gebruikt om mijn aanvraag te behandelen, conform het <a href="privacy.html">privacybeleid</a>.</span>
           </label>
 
-          <!-- Google reCAPTCHA v2 — TIJDELIJK UITGESCHAKELD tot nieuwe v2 site key beschikbaar is.
+          <!-- Google reCAPTCHA v2 -->
           <div class="form-field recaptcha-field">
-            <div class="g-recaptcha" data-sitekey="NIEUWE_SITE_KEY_HIER" data-callback="onRecaptchaSuccess" data-expired-callback="onRecaptchaExpired"></div>
+            <div class="g-recaptcha" data-sitekey="6LcgucAsAAAAAOfHRA_-iXJNvv-S0fL3leBXe1oE" data-callback="onRecaptchaSuccess" data-expired-callback="onRecaptchaExpired"></div>
           </div>
-          -->
 
-          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 14px 22px;">
+          <button type="submit" class="btn btn-primary submit-gated" disabled style="width: 100%; justify-content: center; padding: 14px 22px;">
             Verzend bericht
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
           </button>
