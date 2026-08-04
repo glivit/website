@@ -3124,3 +3124,239 @@ footer {
 @media (max-width: 560px) {
   .team-facts { grid-template-columns: 1fr; }
 }
+
+/* ====================================================
+   TARIEVENPAGINA (tarieven.html)
+   ==================================================== */
+
+/* --- Twee ingangen: syndicus / dossier --- */
+.entry-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+.entry-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 30px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+.entry-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(61,122,66,0.3);
+}
+.entry-card.is-primary {
+  background: linear-gradient(135deg, #f4f9f4 0%, #e9f2ea 100%);
+  border-color: rgba(61,122,66,0.28);
+}
+.entry-tag {
+  display: inline-flex;
+  align-self: flex-start;
+  font-family: 'Archivo', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--green-700);
+  background: var(--green-50);
+  border-radius: 100px;
+  padding: 5px 12px;
+  margin-bottom: 14px;
+}
+.entry-card.is-primary .entry-tag { background: #fff; }
+.entry-card h3 {
+  font-family: 'Archivo', sans-serif;
+  font-size: 1.32rem;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin: 0 0 10px;
+  line-height: 1.25;
+}
+.entry-card p {
+  font-size: 0.95rem;
+  color: var(--slate-700);
+  line-height: 1.62;
+  margin: 0 0 18px;
+}
+.entry-card .btn { align-self: flex-start; margin-top: auto; }
+
+/* --- Tarieventabellen --- */
+.tarief-block { margin-bottom: 42px; }
+.tarief-block:last-child { margin-bottom: 0; }
+.tarief-block > h3 {
+  font-family: 'Archivo', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin: 0 0 6px;
+}
+.tarief-block > .tb-sub {
+  font-size: 0.95rem;
+  color: var(--slate-500);
+  line-height: 1.6;
+  margin: 0 0 18px;
+}
+.tarief-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: #fff;
+}
+table.tarief-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  min-width: 460px;
+}
+table.tarief-table thead th {
+  background: var(--green-700);
+  color: #fff;
+  font-family: 'Archivo', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 13px 18px;
+  white-space: nowrap;
+}
+table.tarief-table thead th.num { text-align: right; }
+table.tarief-table tbody td {
+  padding: 13px 18px;
+  border-top: 1px solid var(--line);
+  color: var(--slate-700);
+  line-height: 1.45;
+}
+table.tarief-table tbody tr:first-child td { border-top: none; }
+table.tarief-table tbody tr:nth-child(even) td { background: #FBFCFB; }
+table.tarief-table tbody td.num {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+table.tarief-table tbody td.num strong {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  color: var(--ink);
+}
+table.tarief-table tbody td.num.accent strong { color: var(--green-700); }
+table.tarief-table tbody td:first-child { color: var(--ink); font-weight: 500; }
+.tarief-note {
+  font-size: 0.86rem;
+  color: var(--slate-500);
+  line-height: 1.6;
+  margin: 10px 2px 0;
+}
+
+/* --- Deadline-markering --- */
+.deadline-flag {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--green-50);
+  border: 1px solid rgba(61,122,66,0.25);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  margin: 0 0 18px;
+}
+.deadline-flag svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  stroke: var(--green-700);
+  margin-top: 1px;
+}
+.deadline-flag p {
+  margin: 0;
+  font-size: 0.93rem;
+  line-height: 1.6;
+  color: var(--slate-700);
+}
+.deadline-flag strong { color: var(--green-700); font-weight: 700; }
+
+/* --- Formulierkaarten --- */
+.form-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 34px 32px;
+  box-shadow: var(--shadow-sm);
+  scroll-margin-top: 96px;
+}
+.form-card > .eyebrow { margin-bottom: 8px; }
+.form-card > h3 {
+  font-family: 'Archivo', sans-serif;
+  font-size: 1.42rem;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+  margin: 0 0 8px;
+  line-height: 1.25;
+}
+.form-card > .fc-sub {
+  font-size: 0.95rem;
+  color: var(--slate-500);
+  line-height: 1.62;
+  margin: 0 0 24px;
+}
+.check-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 18px;
+  margin-top: 4px;
+}
+.check-grid .form-check { margin: 0; }
+.form-fieldset { border: none; padding: 0; margin: 0 0 20px; }
+.form-fieldset > legend {
+  font-family: 'Archivo', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+/* --- Kleine afsluitende regel --- */
+.raam-line {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--slate-500);
+  line-height: 1.7;
+  margin: 30px auto 0;
+  max-width: 640px;
+}
+.raam-line a { color: var(--green-700); font-weight: 600; }
+
+@media (max-width: 900px) {
+  .entry-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  .form-card { padding: 26px 20px; }
+  .check-grid { grid-template-columns: 1fr; }
+}
+
+/* Hero-panel voet met beide telefoonnummers onder elkaar (tarieven.html) */
+.hero-panel-foot.is-stacked {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.hero-panel-foot.is-stacked .hero-phones-inline {
+  margin: 0;
+  gap: 4px 24px;
+}
+.tarief-table-wrap.is-stacked { margin-top: 14px; }
+
+/* Slanke variant van de page-hero: één kolom, geen zijpaneel (tarieven.html) */
+.page-hero.is-slim { padding: 40px 0 42px; }
+.page-hero.is-slim .container { grid-template-columns: 1fr; gap: 0; }
+.page-hero.is-slim .page-hero-left { max-width: 720px; }
+.page-hero.is-slim .lead { margin-bottom: 22px; }
+.page-hero.is-slim + .expertise { padding-top: 56px; }
